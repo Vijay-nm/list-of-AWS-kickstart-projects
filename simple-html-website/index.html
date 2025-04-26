@@ -8,27 +8,73 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
 body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
+body, html {height: 100%; scroll-behavior: smooth;} /* Smooth scrolling */
 .bgimg {
   background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
   min-height: 100%;
   background-position: center;
   background-size: cover;
 }
+h1.w3-jumbo {
+  font-size: 60px;
+  animation: fadeIn 2s ease-in;
+}
+p.w3-large {
+  animation: fadeIn 3s ease-in;
+}
+a.explore-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  animation: fadeIn 4s ease-in;
+}
+
+/* Responsive font size for mobile */
+@media (max-width: 600px) {
+  h1.w3-jumbo {
+    font-size: 40px;
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 </style>
 </head>
 <body>
 
+<!-- Main Banner Section -->
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    Logo
-  </div>
-  <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">Welcome AWS Learning kickstart !!!</h1>
+ <div class="w3-display-topleft w3-padding-large">
+  LOGO
+</div>
+
+  <div class="w3-display-middle w3-center">
+    <h1 class="w3-jumbo">Welcome To Your World!!!</h1>
+
     <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">35 days left</p>
+    <p class="w3-large">See Yourself in this Greens</p>
+
+    <!-- Explore Now button linked to #explore -->
+    <a href="#explore" class="explore-button">Explore Now</a>
   </div>
- 
+</div>
+
+<!-- Explore Section (Scrolling Target) -->
+<div id="explore" class="w3-container w3-padding-64 w3-center" style="background-color:white; color:black;">
+  <h2>Explore Nature 🌳</h2>
+  <p style="font-size:18px; max-width:700px; margin:auto;">
+    Nature is not a place to visit, it is home.  
+    Step into the greens, feel the fresh air, and discover a peaceful world.
+  </p>
 </div>
 
 </body>
